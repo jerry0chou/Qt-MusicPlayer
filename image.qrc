@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icon/lrc.png</file>
+        <file>icon/splash.png</file>
+        <file>icon/mini.png</file>
+        <file>icon/quit.png</file>
+        <file>icon/progress_thumb_2.png</file>
+        <file>icon/pause_hover.png</file>
+        <file>icon/pause_press.png</file>
+        <file>icon/play_hover.png</file>
+        <file>background/background_5.png</file>
+        <file>icon/gray1.png</file>
+        <file>icon/gray2.png</file>
+        <file>icon/scroll.png</file>
+        <file>icon/play_press.png</file>
+        <file>icon/pre_hover.png</file>
+        <file>icon/pre_press.png</file>
+        <file>icon/next_hover.png</file>
+        <file>icon/volume.png</file>
+        <file>icon/mute.png</file>
+        <file>icon/random.png</file>
+        <file>icon/order.png</file>
+        <file>icon/cycle.png</file>
+        <file>icon/folder.png</file>
+        <file>icon/tray.png</file>
+        <file>icon/next_press.png</file>
+    </qresource>
+</RCC>
