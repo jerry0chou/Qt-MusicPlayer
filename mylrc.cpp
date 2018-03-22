@@ -20,12 +20,14 @@ MyLrc::MyLrc(QWidget *parent):
     setMouseTracking(true);
 
 
+    //歌词涂色
     lineargradient.setStart(0,10);
     lineargradient.setFinalStop(0,40);
     lineargradient.setColorAt(0.1,QColor(14,179,255));
     lineargradient.setColorAt(0.5,QColor(114,232,255));
     lineargradient.setColorAt(0.9,QColor(14,179,255));
 
+     //第二层歌词涂色
     masklineargradient.setStart(0, 10);
     masklineargradient.setFinalStop(0, 40);
     masklineargradient.setColorAt(0.1, QColor(222, 54, 4));

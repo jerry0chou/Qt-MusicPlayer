@@ -316,27 +316,27 @@ void Widget::btnUpdate()
     resolve_lrc(musicname);
 }
 
-void Widget::likefile()
-{
-    QString fileName = QFileDialog::getSaveFileName(this, QStringLiteral("另存为"), curFile, tr("(*.txt)"));
-    if (!fileName.isEmpty())
-    {
-        QFile file(fileName);
-        if (!file.open(QFile::WriteOnly | QFile::Text)){
-            QMessageBox::warning(this, QStringLiteral("打开用户保存的列表"), QStringLiteral("无法写入文件 %1:\n%2.").arg(fileName).arg(file.errorString()));
-        }
-        QTextStream out(&file);
-        QApplication::setOverrideCursor(Qt::WaitCursor);
-        for (int i = 0; i < ui->tableWidget->rowCount(); i++)
-        {
-            out << ui->tableWidget->item(i, 2)->text();
-            if (i < ui->tableWidget->rowCount() - 1)
-            out << endl;
-        }
-        QApplication::restoreOverrideCursor();
-        setCurrentFile(fileName);
-    }
-}
+//void Widget::likefile()
+//{
+//    QString fileName = QFileDialog::getSaveFileName(this, QStringLiteral("另存为"), curFile, tr("(*.txt)"));
+//    if (!fileName.isEmpty())
+//    {
+//        QFile file(fileName);
+//        if (!file.open(QFile::WriteOnly | QFile::Text)){
+//            QMessageBox::warning(this, QStringLiteral("打开用户保存的列表"), QStringLiteral("无法写入文件 %1:\n%2.").arg(fileName).arg(file.errorString()));
+//        }
+//        QTextStream out(&file);
+//        QApplication::setOverrideCursor(Qt::WaitCursor);
+//        for (int i = 0; i < ui->tableWidget->rowCount(); i++)
+//        {
+//            out << ui->tableWidget->item(i, 2)->text();
+//            if (i < ui->tableWidget->rowCount() - 1)
+//            out << endl;
+//        }
+//        QApplication::restoreOverrideCursor();
+//        setCurrentFile(fileName);
+//    }
+//}
 
 void Widget::setCurrentFile(const QString &fileName)
 {
@@ -803,7 +803,7 @@ void Widget::myTrayIcon()
 void Widget::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
-    menu.addAction(QStringLiteral("保存播放列表"), this, SLOT(likefile()));
+    //menu.addAction(QStringLiteral("保存播放列表"), this, SLOT(likefile()));
     menu.addAction(QStringLiteral("删除歌曲"), this, SLOT(deleteSelectedMusic()));
     menu.addAction(QStringLiteral("清空列表"), this, SLOT(clearPlaylist()));
     menu.exec(event->globalPos());

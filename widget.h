@@ -93,7 +93,7 @@ private slots:
 
 
     void contextMenuEvent(QContextMenuEvent *event);
-    void likefile();
+    //void likefile();
     void deleteSelectedMusic();
     void clearPlaylist();
 };
